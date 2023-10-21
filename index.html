@@ -12,13 +12,13 @@
             margin: 0;
             padding: 0;
         }
-
+    
         h1 {
             background-color: #333;
             color: #fff;
             padding: 20px 0;
         }
-
+    
         .container {
             max-width: 600px;
             margin: 0 auto;
@@ -27,24 +27,24 @@
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
-
+    
         label {
             display: block;
             margin: 10px 0;
         }
-
+    
         select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-
+    
         .verse {
             margin: 8px 0;
             text-align: left;
         }
-
+    
         button {
             background-color: #333;
             color: #fff;
@@ -54,11 +54,45 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
+    
         button:hover {
             background-color: #555;
         }
-    </style>
+    
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            h1 {
+                padding: 10px 0;
+                font-size: 24px;
+            }
+    
+            label {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+    
+            select {
+                padding: 8px;
+                font-size: 14px;
+            }
+    
+            .verse {
+                margin: 4px 0;
+                font-size: 14px;
+            }
+    
+            button {
+                padding: 8px 16px;
+                margin: 8px;
+            }
+        }
+    </style>    
 </head>
 <body>
     <h1>Quran Chapter Selector</h1>
