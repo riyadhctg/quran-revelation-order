@@ -1,21 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Quran Chapter Selector</title>
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .verse {
+            margin: 8px 0;
+            text-align: left;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <h1>Quran Chapter Selector</h1>
-    <label for="chapter-select">Select a chapter:</label>
-    <select id="chapter-select"></select>
-    <div id="translation-container"></div>
+    <div class="container">
+        <label for="chapter-select">Select a chapter:</label>
+        <button id="prev-chapter-up">Previous Chapter</button>
+        <button id="next-chapter-up">Next Chapter</button>
+        <select id="chapter-select"></select>
+        <div id="translation-container"></div>
+        <button id="prev-chapter">Previous Chapter</button>
+        <button id="next-chapter">Next Chapter</button>
+    </div>
 
     <script>
         const chapterSelect = document.getElementById('chapter-select');
         const translationContainer = document.getElementById('translation-container');
-        let chaptersData = {};
+        const prevChapterButton = document.getElementById('prev-chapter');
+        const nextChapterButton = document.getElementById('next-chapter');
+        const prevChapterButtonUp = document.getElementById('prev-chapter-up');
+        const nextChapterButtonUp = document.getElementById('next-chapter-up');
+        let chaptersData = [];
+        let currentChapterIndex = 0;
 
         // JSON data containing the chapters
-        const chaptersUrl = 'https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/index.json'; // Replace with the actual URL
+        const chaptersUrl = 'quran_index.json'; // Replace with the actual URL
 
         // Fetch and populate the dropdown
         async function fetchChapters() {
@@ -25,8 +93,8 @@
                     chaptersData = await response.json();
                     chaptersData.forEach((chapter) => {
                         const option = document.createElement('option');
-                        option.value = chapter.id;
-                        option.text = chapter.name;
+                        option.value = chapter.link; // Use the "link" for fetching translations
+                        option.text = `${chapter.id}. ${chapter.transliteration}`;
                         chapterSelect.appendChild(option);
                     });
                 } else {
@@ -38,20 +106,62 @@
         }
 
         // Function to load and display translation verses
-        function displayTranslationVerses(chapterId) {
-            const selectedChapter = chaptersData.find((chapter) => chapter.id === chapterId);
-            if (selectedChapter) {
-                const translationVerses = selectedChapter.verses.map((verse) => verse.translation);
-                translationVerses.sort((a, b) => a.id - b.id); // Sort by verse ID
-                translationContainer.innerHTML = translationVerses.map(verse => verse).join('<br>');
+        async function loadChapterTranslation(url) {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    const translationVerses = data.verses.map((verse) => `${verse.id}. ${verse.translation}`);
+                    translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse">${verse}</div>`).join('');
+                } else {
+                    console.error('Failed to retrieve chapter translation data.');
+                }
+            } catch (error) {
+                console.error('An error occurred:', error);
             }
         }
 
         // Event listener for dropdown change
         chapterSelect.addEventListener('change', () => {
-            const selectedChapterId = parseInt(chapterSelect.value);
-            if (!isNaN(selectedChapterId)) {
-                displayTranslationVerses(selectedChapterId);
+            const selectedChapterUrl = chapterSelect.value;
+            if (selectedChapterUrl) {
+                loadChapterTranslation(selectedChapterUrl);
+            }
+        });
+
+        // Event listener for previous chapter button
+        prevChapterButton.addEventListener('click', () => {
+            if (currentChapterIndex > 0) {
+                currentChapterIndex--;
+                chapterSelect.value = chaptersData[currentChapterIndex].link;
+                loadChapterTranslation(chaptersData[currentChapterIndex].link);
+            }
+        });
+
+        // Event listener for next chapter button
+        nextChapterButton.addEventListener('click', () => {
+            if (currentChapterIndex < chaptersData.length - 1) {
+                currentChapterIndex++;
+                chapterSelect.value = chaptersData[currentChapterIndex].link;
+                loadChapterTranslation(chaptersData[currentChapterIndex].link);
+            }
+        });
+
+        // Event listener for previous chapter button
+        prevChapterButtonUp.addEventListener('click', () => {
+            if (currentChapterIndex > 0) {
+                currentChapterIndex--;
+                chapterSelect.value = chaptersData[currentChapterIndex].link;
+                loadChapterTranslation(chaptersData[currentChapterIndex].link);
+            }
+        });
+
+        // Event listener for next chapter button
+        nextChapterButtonUp.addEventListener('click', () => {
+            if (currentChapterIndex < chaptersData.length - 1) {
+                currentChapterIndex++;
+                chapterSelect.value = chaptersData[currentChapterIndex].link;
+                loadChapterTranslation(chaptersData[currentChapterIndex].link);
             }
         });
 
