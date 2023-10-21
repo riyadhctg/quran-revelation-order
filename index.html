@@ -1,1 +1,36 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Content Display</title>
+</head>
+<body>
+    <h1>JSON Content</h1>
+    <div id="json-content">
+        <!-- JSON content will be displayed here -->
+    </div>
+
+    <script>
+        // URL of the JSON file you want to retrieve
+        const jsonUrl = 'https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/index.json';
+
+        // Function to fetch and display JSON content
+        async function fetchAndDisplayJSONContent() {
+            try {
+                const response = await fetch(jsonUrl);
+                if (response.ok) {
+                    const data = await response.json();
+                    const jsonContent = document.getElementById('json-content');
+                    jsonContent.textContent = JSON.stringify(data, null, 2);
+                } else {
+                    console.error('Failed to retrieve JSON data.');
+                }
+            } catch (error) {
+                console.error('An error occurred:', error);
+            }
+        }
+
+        // Call the function to retrieve and display JSON content
+        fetchAndDisplayJSONContent();
+    </script>
+</body>
+</html>
