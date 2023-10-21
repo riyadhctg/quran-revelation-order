@@ -12,6 +12,7 @@
     <script>
         const chapterSelect = document.getElementById('chapter-select');
         const translationContainer = document.getElementById('translation-container');
+        let chaptersData = {};
 
         // JSON data containing the chapters
         const chaptersUrl = 'https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/index.json'; // Replace with the actual URL
@@ -21,10 +22,10 @@
             try {
                 const response = await fetch(chaptersUrl);
                 if (response.ok) {
-                    const data = await response.json();
-                    data.forEach((chapter) => {
+                    chaptersData = await response.json();
+                    chaptersData.forEach((chapter) => {
                         const option = document.createElement('option');
-                        option.value = chapter.link;
+                        option.value = chapter.id;
                         option.text = chapter.name;
                         chapterSelect.appendChild(option);
                     });
@@ -36,27 +37,21 @@
             }
         }
 
-        // Function to load and display translations
-        async function loadChapterTranslation(url) {
-            try {
-                const response = await fetch(url);
-                if (response.ok) {
-                    const data = await response.json();
-                    const translation = data.translations[0].text; // Assuming you want the first translation
-                    translationContainer.textContent = translation;
-                } else {
-                    console.error('Failed to retrieve chapter translation data.');
-                }
-            } catch (error) {
-                console.error('An error occurred:', error);
+        // Function to load and display translation verses
+        function displayTranslationVerses(chapterId) {
+            const selectedChapter = chaptersData.find((chapter) => chapter.id === chapterId);
+            if (selectedChapter) {
+                const translationVerses = selectedChapter.verses.map((verse) => verse.translation);
+                translationVerses.sort((a, b) => a.id - b.id); // Sort by verse ID
+                translationContainer.innerHTML = translationVerses.map(verse => verse).join('<br>');
             }
         }
 
         // Event listener for dropdown change
         chapterSelect.addEventListener('change', () => {
-            const selectedChapterUrl = chapterSelect.value;
-            if (selectedChapterUrl) {
-                loadChapterTranslation(selectedChapterUrl);
+            const selectedChapterId = parseInt(chapterSelect.value);
+            if (!isNaN(selectedChapterId)) {
+                displayTranslationVerses(selectedChapterId);
             }
         });
 
