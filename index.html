@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSON Content Display</title>
+    <title>Quran Chapter Selector</title>
 </head>
 <body>
-    <h1>JSON Content</h1>
-    <div id="json-content">
-        <!-- JSON content will be displayed here -->
-    </div>
+    <h1>Quran Chapter Selector</h1>
+    <label for="chapter-select">Select a chapter:</label>
+    <select id="chapter-select"></select>
+    <div id="translation-container"></div>
 
     <script>
-        // URL of the JSON file you want to retrieve
-        const jsonUrl = 'https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/index.json';
+        const chapterSelect = document.getElementById('chapter-select');
+        const translationContainer = document.getElementById('translation-container');
 
-        // Function to fetch and display JSON content
-        async function fetchAndDisplayJSONContent() {
+        // JSON data containing the chapters
+        const chaptersUrl = 'https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/index.json'; // Replace with the actual URL
+
+        // Fetch and populate the dropdown
+        async function fetchChapters() {
             try {
-                const response = await fetch(jsonUrl);
+                const response = await fetch(chaptersUrl);
                 if (response.ok) {
                     const data = await response.json();
-                    const jsonContent = document.getElementById('json-content');
-                    jsonContent.textContent = JSON.stringify(data, null, 2);
+                    data.forEach((chapter) => {
+                        const option = document.createElement('option');
+                        option.value = chapter.link;
+                        option.text = chapter.name;
+                        chapterSelect.appendChild(option);
+                    });
                 } else {
-                    console.error('Failed to retrieve JSON data.');
+                    console.error('Failed to retrieve chapter data.');
                 }
             } catch (error) {
                 console.error('An error occurred:', error);
             }
         }
 
-        // Call the function to retrieve and display JSON content
-        fetchAndDisplayJSONContent();
+        // Function to load and display translations
+        async function loadChapterTranslation(url) {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    const translation = data.translations[0].text; // Assuming you want the first translation
+                    translationContainer.textContent = translation;
+                } else {
+                    console.error('Failed to retrieve chapter translation data.');
+                }
+            } catch (error) {
+                console.error('An error occurred:', error);
+            }
+        }
+
+        // Event listener for dropdown change
+        chapterSelect.addEventListener('change', () => {
+            const selectedChapterUrl = chapterSelect.value;
+            if (selectedChapterUrl) {
+                loadChapterTranslation(selectedChapterUrl);
+            }
+        });
+
+        // Initialize the app
+        fetchChapters();
     </script>
 </body>
 </html>
