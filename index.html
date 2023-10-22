@@ -35,6 +35,15 @@
         header {
             background: #222;
         }
+        .btn-group {
+            width: 100%;
+        }
+
+        @media (max-width: 576px) {
+            .btn-group {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -43,11 +52,9 @@
     </header>
     <div class="container mt-4">
         <div class="row sticky-top">
-            <div class="col-6 col-md">
-                <button id="prev-chapter-up" class="btn btn-primary mb-3">Previous Chapter</button>
-            </div>
-            <div class="col-6 col-md text-md-right">
-                <button id="next-chapter-up" class="btn btn-primary mb-3">Next Chapter</button>
+            <div class="col-12 btn-group d-flex justify-content-between">
+                <button id="prev-chapter-up" class="btn btn-primary mb-1"> << Previous Chapter</button>
+                <button id="next-chapter-up" class="btn btn-primary mb-1">Next Chapter >> </button>
             </div>
             <div class="col-12 text-center">
                 <select id="chapter-select" class="form-control"></select>
@@ -55,6 +62,7 @@
         </div>
         <div id="translation-container" class="mt-4"></div>
     </div>
+    
     
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
