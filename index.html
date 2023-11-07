@@ -6,45 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Quran by Order of Revelation</title>
-    <style>
-       body {
-            background-color: #333;
-            color: #fff;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .sticky-top {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #333;
-        }
-        .btn-primary {
-            background-color: #007bff;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        select.form-control {
-            background-color: #444;
-            color: #fff;
-        }
-        header {
-            background: #222;
-        }
-        .btn-group {
-            width: 100%;
-        }
-
-        @media (max-width: 576px) {
-            .btn-group {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="bg-dark text-white text-center py-4">
@@ -67,64 +30,8 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="quran_index.js" type="text/javascript"></script>
-    <script>
-        const chapterSelect = document.getElementById('chapter-select');
-        const translationContainer = document.getElementById('translation-container');
-        const prevChapterButtonUp = document.getElementById('prev-chapter-up');
-        const nextChapterButtonUp = document.getElementById('next-chapter-up');
-        let currentChapterIndex = 0
-    
-        quranIndex.forEach((chapter) => {
-            const option = document.createElement('option');
-            option.value = chapter.link; // Use the "link" for fetching translations
-            option.text = `${chapter.rev_order}. ${chapter.transliteration} (${chapter.id})`;
-            chapterSelect.appendChild(option);
-        });
-
-        // Function to load and display translation verses
-        async function loadChapterTranslation(url) {
-            try {
-                const response = await fetch(url);
-                if (response.ok) {
-                    const data = await response.json();
-                    const translationVerses = data.verses.map((verse) => `${verse.id}. ${verse.translation}`);
-                    translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse">${verse}</div>`).join('');
-                } else {
-                    console.error('Failed to retrieve chapter translation data.');
-                }
-            } catch (error) {
-                console.error('An error occurred:', error);
-            }
-        }
-
-        // Event listener for dropdown change
-        chapterSelect.addEventListener('change', () => {
-            const selectedChapterUrl = chapterSelect.value;
-            // Get the index of the selected option
-            currentChapterIndex = chapterSelect.selectedIndex;
-            if (selectedChapterUrl) {
-                loadChapterTranslation(selectedChapterUrl);
-            }
-        });
-
-        // Event listener for previous chapter button
-        prevChapterButtonUp.addEventListener('click', () => {
-            if (currentChapterIndex > 0) {
-                currentChapterIndex--;
-                chapterSelect.value = quranIndex[currentChapterIndex].link;
-                loadChapterTranslation(quranIndex[currentChapterIndex].link);
-            }
-        });
-
-        // Event listener for next chapter button
-        nextChapterButtonUp.addEventListener('click', () => {
-            if (currentChapterIndex < quranIndex.length - 1) {
-                currentChapterIndex++;
-                chapterSelect.value = quranIndex[currentChapterIndex].link;
-                loadChapterTranslation(quranIndex[currentChapterIndex].link);
-            }
-        });
-    </script>
+    <script src="data/quran_index.js" type="text/javascript"></script>
+    <script src="data/quran_en.js" type="text/javascript"></script>
+    <script src="logic.js" type="text/javascript"></script>
 </body>
 </html>
