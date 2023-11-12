@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+</head>
+<body>
+
+<label for="seerahDropdown">Select a Key:</label>
+<select id="seerahDropdown" onchange="populateQuranDropdown()">
+    <option value="" disabled selected>Select a Key</option>
+    <!-- Populate the dropdown with keys from seerahKeyed -->
+    <!-- You can dynamically generate options using JavaScript -->
+    <!-- For simplicity, we hardcode the options here -->
+    <option value="A">A</option>
+    <option value="B">B</option>
+</select>
+
+<label for="quranDropdown">Select an Option:</label>
+<select id="quranDropdown">
+    <!-- This dropdown will be populated dynamically based on the selection in the first dropdown -->
+    <option value="" disabled selected>Select an Option</option>
+</select>
+
+<script>
+// Your provided data
+let seerahKeyed = {
+    "A": [
+        {
+            "Title": "The first revelations",
+            "Year (CE)": "610 CE",
+            "Hijri Year": "13 BH",
+            "Content": "The Prophet ﷺ would, on many occasions, retreat to a state of Then at last the silence was broken, and there came further reassurance."
+        },
+        {
+            "Title": "Private Propagations",
+            "Year (CE)": "611 CE",
+            "Hijri Year": "12 BH",
+            "Content": "With Makkah being the hub of the Arabs, it was also the capital converts were killed due to their unshakable stance and resolute faith."
+        }
+    ],
+    "B": [
+        {
+            "Title": "The end of private propagation",
+            "Year (CE)": "613 CE",
+            "Hijri Year": "10 BH",
+            "Content": "Even though the call was conducted in a clandestine manner and altered once they realised the ramifications of his call. The elite became "
+        },
+        {
+            "Title": "The first migration",
+            "Year (CE)": "614 CE",
+            "Hijri Year": "9 BH",
+            "Content": "Although the converts now hid their faith, the Prophet, on the other hand, would promulgate the Islamic faith and preach it openly with strong commitment and assiduous pursuit. But for the general welfare of the"
+        }
+    ]
+};
+
+let quranIndexRevisedKeyed = {
+    "A": [
+        {
+            "FinRevOrder": 1,
+            "id": 96.1,
+            "rev_order": 1,
+            "name": "العلق",
+            "transliteration": "Al-Alaq:1-5"
+        },
+        {
+            "FinRevOrder": 2,
+            "id": 74.1,
+            "rev_order": 4,
+            "name": "المدثر",
+            "transliteration": "Al-Muddaththir:1-7"
+        }
+    ],
+    "B": [
+        {
+            "FinRevOrder": 1,
+            "id": 96.1,
+            "rev_order": 1,
+            "name": "العلق",
+            "transliteration": "dsfsdfdsf"
+        },
+        {
+            "FinRevOrder": 2,
+            "id": 74.1,
+            "rev_order": 4,
+            "name": "المدثر",
+            "transliteration": "sfsdfsdfsf"
+        }
+    ]
+};
+
+// Function to populate the second dropdown based on the selected key
+function populateQuranDropdown() {
+    // Get the selected key from the first dropdown
+    let selectedKey = document.getElementById("seerahDropdown").value;
+    // Get the corresponding options from quranIndexRevisedKeyed
+    let options = quranIndexRevisedKeyed[selectedKey];
+
+    // Clear the current options in the second dropdown
+    let quranDropdown = document.getElementById("quranDropdown");
+    quranDropdown.innerHTML = '<option value="" disabled selected>Select an Option</option>';
+
+    // Populate the second dropdown with options
+    options.forEach(option => {
+        let newOption = document.createElement("option");
+        newOption.value = option.transliteration;
+        newOption.text = option.transliteration;
+        quranDropdown.add(newOption);
+    });
+}
+</script>
+
+</body>
+</html>
