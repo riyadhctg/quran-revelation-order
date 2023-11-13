@@ -49,6 +49,11 @@ function loadChapterTranslationJson(chapterId) {
     translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse">${verse}</div>`).join('');
 }
 
+// Function to load and display translation verses from js file
+function clearQuranContentBox() {
+    translationContainer.innerHTML = "";
+}
+
 // // Event listener for dropdown change
 // chapterSelect.addEventListener('change', () => {
 //     const selectedChapterId = chapterSelect.value;
@@ -87,15 +92,23 @@ seerahKeyedSelect.addEventListener('change', () => {
 
     // get seerah content:
     updateTextBox(seerahKeyedSelect.value)
+    clearQuranContentBox()
 
     // get surah list 
     // Get the selected key from the first dropdown
     quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed;
     let selectedKey = seerahKeyedSelect.value;
     // Get the corresponding options from quranIndexRevisedKeyed
+
+    // clear existing selections
+    while (quranIndexRevisedKeyedSelect.options.length > 1) {
+        quranIndexRevisedKeyedSelect.remove(1);
+    }
+
     try {
         quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed[selectedKey];
-        // quranIndexRevisedKeyedSelect.innerHTML = '<option value="" disabled selected>Select an Option</option>';
+    
+        quranIndexRevisedKeyedSelect.innerHTML = '<option value="" disabled selected>Select a Surah from this stage</option>';
         quranIndexRevisedKeyedCurrent.forEach(option => {
             let newOption = document.createElement("option");
             newOption.value = option.id;
