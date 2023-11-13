@@ -1,19 +1,26 @@
 const seerahKeyedSelect = document.getElementById('seerahDropdown');
 const quranIndexRevisedKeyedSelect = document.getElementById('quranDropdown');
 // const chapterSelect = document.getElementById('chapter-select');
+const textBoxContent = document.getElementById('textBoxContent');
+const collapseExample = new bootstrap.Collapse(document.getElementById('collapseExample'));
 
 const translationContainer = document.getElementById('translation-container');
 const prevChapterButtonUp = document.getElementById('prev-chapter-up');
 const nextChapterButtonUp = document.getElementById('next-chapter-up');
+
+const seerahContentCloseButton = document.getElementById('seerahContentCloseButton');
+
 let currentChapterIndex = 0
 
+// default initial selection
+let quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed["A"];
 
 
 function populateDropdown(jsonData, dropdownElement) {
     for (const key in jsonData) {
         const optionElement = document.createElement("option");
         optionElement.value = key;
-        optionElement.text = key;
+        optionElement.text = `${jsonData[key]['Title']} - (${jsonData[key]['year_ce']})`;
         // seerah content is down here
         // optionElement.textContent = jsonData[key];
         dropdownElement.appendChild(optionElement);
@@ -21,7 +28,8 @@ function populateDropdown(jsonData, dropdownElement) {
 }
 
 window.onload = function() {
-    populateDropdown(seerahKeyed, seerahKeyedSelect);
+    populateDropdown(seerahShortKeyed, seerahKeyedSelect);
+    collapseExample.hide(); 
 };
 
 
@@ -53,39 +61,64 @@ function loadChapterTranslationJson(chapterId) {
 //     }
 // });
 
-// Event listener for previous chapter button
-prevChapterButtonUp.addEventListener('click', () => {
-    if (currentChapterIndex > 0) {
-        currentChapterIndex--;
-        quranIndexRevisedKeyedSelect.value = quranIndexRevised[currentChapterIndex].id;
-        loadChapterTranslationJson(quranIndexRevised[currentChapterIndex].id);
-    }
-});
 
-// Event listener for next chapter button
-nextChapterButtonUp.addEventListener('click', () => {
-    if (currentChapterIndex < quranIndexRevised.length - 1) {
-        currentChapterIndex++;
-        quranIndexRevisedKeyedSelect.value = quranIndexRevised[currentChapterIndex].id;
-        loadChapterTranslationJson(quranIndexRevised[currentChapterIndex].id);
-    }
-});
+// SOME bugs on the next / previous buttons need fixing
+// // Event listener for previous chapter button
+// prevChapterButtonUp.addEventListener('click', () => {
+//     if (currentChapterIndex > 0) {
+//         currentChapterIndex--;
+//         quranIndexRevisedKeyedSelect.value = quranIndexRevised[currentChapterIndex].id;
+//         loadChapterTranslationJson(quranIndexRevised[currentChapterIndex].id);
+//     }
+// });
+
+// // Event listener for next chapter button
+// nextChapterButtonUp.addEventListener('click', () => {
+//     if (currentChapterIndex < quranIndexRevisedKeyedCurrent.length - 1) {
+//         currentChapterIndex++;
+//         quranIndexRevisedKeyedSelect.value = quranIndexRevised[currentChapterIndex].id;
+//         loadChapterTranslationJson(quranIndexRevised[currentChapterIndex].id);
+//     }
+// });
 
 
 // Event listener for dropdown change
 seerahKeyedSelect.addEventListener('change', () => {
+
+    // get seerah content:
+    updateTextBox(seerahKeyedSelect.value)
+
+    // get surah list 
     // Get the selected key from the first dropdown
-    let quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed;
+    quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed;
     let selectedKey = seerahKeyedSelect.value;
     // Get the corresponding options from quranIndexRevisedKeyed
-    quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed[selectedKey];
-    quranIndexRevisedKeyedSelect.innerHTML = '<option value="" disabled selected>Select an Option</option>';
-    quranIndexRevisedKeyedCurrent.forEach(option => {
-        let newOption = document.createElement("option");
-        newOption.value = option.id;
-        newOption.text = option.transliteration;
-        quranIndexRevisedKeyedSelect.add(newOption);
-    });
+    try {
+        quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed[selectedKey];
+        // quranIndexRevisedKeyedSelect.innerHTML = '<option value="" disabled selected>Select an Option</option>';
+        quranIndexRevisedKeyedCurrent.forEach(option => {
+            let newOption = document.createElement("option");
+            newOption.value = option.id;
+            newOption.text = `${option.transliteration} (${option.id})`;
+            quranIndexRevisedKeyedSelect.add(newOption);
+        });
+    } catch {
+        console.log("Key does not exist in Quran Index: ", selectedKey)
+    }
+});
+
+
+// Function to update the text box content and show the collapsible box
+function updateTextBox(seerahStage) {
+    // Update the content of the text box based on the selected option
+    textBoxContent.textContent = seerahShortKeyed[seerahStage]['Stage_summary'];
+    // Show the collapsible box
+    collapseExample.show();
+}
+
+
+seerahContentCloseButton.addEventListener('click', () => {
+    collapseExample.hide();
 });
 
 

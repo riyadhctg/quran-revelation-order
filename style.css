@@ -29,6 +29,25 @@ header {
     width: 100%;
 }
 
+/* Custom style for the dark background */
+#textBoxContent {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 15px; /* Add padding for better visibility */
+    overflow: auto; /* Make the text box scrollable */
+    max-height: 200px; 
+    margin: 0;
+    text-align: left;
+}
+
+.closeButton {
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #343a40;
+}
+
 @media (max-width: 576px) {
     .btn-group {
         flex-direction: column;

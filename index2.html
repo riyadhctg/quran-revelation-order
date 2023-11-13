@@ -1,115 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapsible Text Box</title>
+  <!-- Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<label for="seerahDropdown">Select a Key:</label>
-<select id="seerahDropdown" onchange="populateQuranDropdown()">
-    <option value="" disabled selected>Select a Key</option>
-    <!-- Populate the dropdown with keys from seerahKeyed -->
-    <!-- You can dynamically generate options using JavaScript -->
-    <!-- For simplicity, we hardcode the options here -->
-    <option value="A">A</option>
-    <option value="B">B</option>
-</select>
+<div class="container mt-5">
+  <div class="mb-3">
+    <label for="dropdown" class="form-label">Select an option:</label>
+    <select id="dropdown" class="form-select" onchange="updateTextBox()">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+  </div>
 
-<label for="quranDropdown">Select an Option:</label>
-<select id="quranDropdown">
-    <!-- This dropdown will be populated dynamically based on the selection in the first dropdown -->
-    <option value="" disabled selected>Select an Option</option>
-</select>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body" id="textBoxContent">
+      <!-- Content will be populated dynamically -->
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Your provided data
-let seerahKeyed = {
-    "A": [
-        {
-            "Title": "The first revelations",
-            "Year (CE)": "610 CE",
-            "Hijri Year": "13 BH",
-            "Content": "The Prophet ﷺ would, on many occasions, retreat to a state of Then at last the silence was broken, and there came further reassurance."
-        },
-        {
-            "Title": "Private Propagations",
-            "Year (CE)": "611 CE",
-            "Hijri Year": "12 BH",
-            "Content": "With Makkah being the hub of the Arabs, it was also the capital converts were killed due to their unshakable stance and resolute faith."
-        }
-    ],
-    "B": [
-        {
-            "Title": "The end of private propagation",
-            "Year (CE)": "613 CE",
-            "Hijri Year": "10 BH",
-            "Content": "Even though the call was conducted in a clandestine manner and altered once they realised the ramifications of his call. The elite became "
-        },
-        {
-            "Title": "The first migration",
-            "Year (CE)": "614 CE",
-            "Hijri Year": "9 BH",
-            "Content": "Although the converts now hid their faith, the Prophet, on the other hand, would promulgate the Islamic faith and preach it openly with strong commitment and assiduous pursuit. But for the general welfare of the"
-        }
-    ]
-};
+  // Map to store content for each option
+  const contentMap = {
+    option1: "Content for Option 1",
+    option2: "Content for Option 2",
+    option3: "Content for Option 3",
+  };
 
-let quranIndexRevisedKeyed = {
-    "A": [
-        {
-            "FinRevOrder": 1,
-            "id": 96.1,
-            "rev_order": 1,
-            "name": "العلق",
-            "transliteration": "Al-Alaq:1-5"
-        },
-        {
-            "FinRevOrder": 2,
-            "id": 74.1,
-            "rev_order": 4,
-            "name": "المدثر",
-            "transliteration": "Al-Muddaththir:1-7"
-        }
-    ],
-    "B": [
-        {
-            "FinRevOrder": 1,
-            "id": 96.1,
-            "rev_order": 1,
-            "name": "العلق",
-            "transliteration": "dsfsdfdsf"
-        },
-        {
-            "FinRevOrder": 2,
-            "id": 74.1,
-            "rev_order": 4,
-            "name": "المدثر",
-            "transliteration": "sfsdfsdfsf"
-        }
-    ]
-};
+  // Function to update the text box content and show the collapsible box
+  function updateTextBox() {
+    const dropdown = document.getElementById('dropdown');
+    const selectedOption = dropdown.value;
+    const textBoxContent = document.getElementById('textBoxContent');
+    const collapseExample = new bootstrap.Collapse(document.getElementById('collapseExample'));
 
-// Function to populate the second dropdown based on the selected key
-function populateQuranDropdown() {
-    // Get the selected key from the first dropdown
-    let selectedKey = document.getElementById("seerahDropdown").value;
-    // Get the corresponding options from quranIndexRevisedKeyed
-    let options = quranIndexRevisedKeyed[selectedKey];
+    // Update the content of the text box based on the selected option
+    textBoxContent.textContent = contentMap[selectedOption];
 
-    // Clear the current options in the second dropdown
-    let quranDropdown = document.getElementById("quranDropdown");
-    quranDropdown.innerHTML = '<option value="" disabled selected>Select an Option</option>';
-
-    // Populate the second dropdown with options
-    options.forEach(option => {
-        let newOption = document.createElement("option");
-        newOption.value = option.transliteration;
-        newOption.text = option.transliteration;
-        quranDropdown.add(newOption);
-    });
-}
+    // Show the collapsible box
+    collapseExample.show();
+  }
 </script>
 
 </body>

@@ -1569,5 +1569,5 @@ let quranIndexRevisedKeyed = {
           "total_verses": 3,
           "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/110.json"
        }
-    ]
+    ],
  }
