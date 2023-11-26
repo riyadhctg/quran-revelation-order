@@ -6,7 +6,7 @@ const collapseExample = new bootstrap.Collapse(document.getElementById('collapse
 
 const originalVersesContainer = document.getElementById('original-verse-container');
 const originalVersesIndividualDivs = document.getElementsByClassName("verse-original");
-const translationContainer = document.getElementById('translation-container');
+
 const prevChapterButtonUp = document.getElementById('prev-chapter-up');
 const nextChapterButtonUp = document.getElementById('next-chapter-up');
 
@@ -83,6 +83,7 @@ quranLangDropdown.addEventListener('change', function() {
 
     // Display the selected value
     quranContentEn = loadQuranContent(selectedValue);
+    clearQuranContentBox()
 });
 
 
@@ -133,8 +134,9 @@ function loadChapterTranslationJson(chapterId, startVerseIdx, endVerseIdx) {
 
 // Function to load and display translation verses from js file
 function clearQuranContentBox() {
-    translationContainer.innerHTML = "";
+    originalVersesContainer.innerHTML = "";
 }
+
 
 // // Event listener for dropdown change
 // chapterSelect.addEventListener('change', () => {
