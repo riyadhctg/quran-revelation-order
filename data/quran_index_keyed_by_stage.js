@@ -216,7 +216,7 @@ let quranIndexRevisedKeyed = {
           "rev_order": 1,
           "name": "العلق",
           "transliteration": "Al-Alaq:6-19",
-          "Verses": "[6,9]",
+          "Verses": "[6,19]",
           "translation": "The Clot",
           "GregYears": "613-615",
           "type": "meccan",

@@ -16,6 +16,43 @@ let currentChapterIndex = 0
 let quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed["A"];
 
 
+
+// Function to load JSON synchronously
+function loadQuranContent() {
+    // URL of the JSON file
+    const jsonUrl = 'https://raw.githubusercontent.com/risan/quran-json/main/data/editions/en.json';
+
+    // Function to perform synchronous request
+    function loadJSONSync(url) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url, false); // false makes the request synchronous
+        xhr.send();
+
+        if (xhr.status === 200) {
+            return JSON.parse(xhr.responseText);
+        } else {
+            throw new Error(`HTTP error! Status: ${xhr.status}`);
+        }
+    }
+
+    try {
+        // Synchronously load JSON data
+        const jsonData = loadJSONSync(jsonUrl);
+
+        // Work with the JSON data
+        console.log(jsonData);
+    } catch (error) {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Call the function to load JSON synchronously
+quranContentEn = loadQuranContent();
+
+
+
+
 function populateDropdown(jsonData, dropdownElement) {
     for (const key in jsonData) {
         const optionElement = document.createElement("option");
@@ -41,11 +78,12 @@ window.onload = function() {
 // });
 
 // Function to load and display translation verses from js file
-function loadChapterTranslationJson(chapterId) {
+function loadChapterTranslationJson(chapterId, startVerseIdx, endVerseIdx) {
     chapterId = parseFloat(chapterId)
     // Select the element with id = 1
-    const chapterContent = quranContentEnRevised.find(item => item.id === chapterId);
-    const translationVerses = chapterContent.verses.map((verse) => `${verse.id}. ${verse.translation}`);
+    const chapterContent = quranContentEn.find(item => item.id === chapterId);
+    selectedVerses = chapterContent.verses.slice(startVerseIdx, endVerseIdx)
+    const translationVerses = selectedVerses.map((verse) => `${verse.id}. ${verse.translation}`);
     translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse">${verse}</div>`).join('');
 }
 
@@ -87,7 +125,7 @@ function clearQuranContentBox() {
 // });
 
 
-// Event listener for dropdown change
+// Event listener for Seerah dropdown change
 seerahKeyedSelect.addEventListener('change', () => {
 
     // get seerah content:
@@ -111,7 +149,7 @@ seerahKeyedSelect.addEventListener('change', () => {
         quranIndexRevisedKeyedSelect.innerHTML = '<option value="" disabled selected>Select a Surah from this stage</option>';
         quranIndexRevisedKeyedCurrent.forEach(option => {
             let newOption = document.createElement("option");
-            newOption.value = option.id;
+            newOption.value = JSON.stringify(option);
             newOption.text = `${option.transliteration} (${option.id})`;
             quranIndexRevisedKeyedSelect.add(newOption);
         });
@@ -135,13 +173,27 @@ seerahContentCloseButton.addEventListener('click', () => {
 });
 
 
-// Event listener for dropdown change
+// Event listener for Quran dropdown change
 quranIndexRevisedKeyedSelect.addEventListener('change', () => {
-    const selectedChapterId = quranIndexRevisedKeyedSelect.value;
-    // Get the index of the selected option
-    currentChapterIndex = quranIndexRevisedKeyedSelect.selectedIndex;
+    const selectedQuranIdxObject = JSON.parse(quranIndexRevisedKeyedSelect.value)
+    const selectedChapterId = selectedQuranIdxObject.id | 0;
+    versesArray = JSON.parse(selectedQuranIdxObject.Verses)
+    console.log("selectedQuranIdxObject", selectedQuranIdxObject)
+    let startIdx, endIdx = 0
+    startIdx = versesArray[0] - 1
+    if (versesArray[1] == -1) {
+        // we use slice which already excludes the last index, so don't need to use -1 here
+        endIdx = selectedQuranIdxObject.total_verses
+    } else {
+        // we use slice which already excludes the last index, so don't need to use -1 here
+        endIdx = versesArray[1]
+    }
+    
+    console.log("startIdx, endIdx", startIdx, endIdx)
+    // // Get the index of the selected option
+    // currentChapterIndex = quranIndexRevisedKeyedSelect.selectedIndex;
     if (selectedChapterId) {
-        loadChapterTranslationJson(selectedChapterId);
+        loadChapterTranslationJson(selectedChapterId, startIdx, endIdx);
     }
 });
 
