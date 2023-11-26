@@ -4,11 +4,14 @@ const quranIndexRevisedKeyedSelect = document.getElementById('quranDropdown');
 const textBoxContent = document.getElementById('textBoxContent');
 const collapseExample = new bootstrap.Collapse(document.getElementById('collapseExample'));
 
+const originalVersesContainer = document.getElementById('original-verse-container');
+const originalVersesIndividualDivs = document.getElementsByClassName("verse-original");
 const translationContainer = document.getElementById('translation-container');
 const prevChapterButtonUp = document.getElementById('prev-chapter-up');
 const nextChapterButtonUp = document.getElementById('next-chapter-up');
 
 const seerahContentCloseButton = document.getElementById('seerahContentCloseButton');
+const toggleArabicCheckBox = document.getElementById('toggleArabicCheckBox');
 
 let currentChapterIndex = 0
 
@@ -18,9 +21,9 @@ let quranIndexRevisedKeyedCurrent = quranIndexRevisedKeyed["A"];
 
 
 // Function to load JSON synchronously
-function loadQuranContent() {
+function loadQuranContent(quranLangVersion) {
     // URL of the JSON file
-    const jsonUrl = 'https://raw.githubusercontent.com/risan/quran-json/main/data/editions/en.json';
+    const jsonUrl = `https://raw.githubusercontent.com/riyadhctg/quran-revelation-order/main/data/quranContent/${quranLangVersion}.json`;
 
     // Function to perform synchronous request
     function loadJSONSync(url) {
@@ -38,9 +41,7 @@ function loadQuranContent() {
     try {
         // Synchronously load JSON data
         const jsonData = loadJSONSync(jsonUrl);
-
-        // Work with the JSON data
-        console.log(jsonData);
+        return jsonData
     } catch (error) {
         // Handle errors
         console.error('Error fetching data:', error);
@@ -48,9 +49,42 @@ function loadQuranContent() {
 }
 
 // Call the function to load JSON synchronously
-quranContentEn = loadQuranContent();
+let quranContentEn = loadQuranContent("quran_en");
 
+// Array of JSON file options with labels
+var quranLangOptions = [
+    { value: "quran_es", label: "Quran (Spanish)" },
+    { value: "quran_ru", label: "Quran (Russian)" },
+    { value: "quran_transliteration", label: "Quran (Transliteration)" },
+    { value: "quran_bn", label: "Quran (Bengali)" },
+    { value: "quran_fr", label: "Quran (French)" },
+    { value: "quran_sv", label: "Quran (Swedish)" },
+    { value: "quran_ur", label: "Quran (Urdu)" },
+    { value: "quran_en", label: "Quran (English)" },
+    { value: "quran_id", label: "Quran (Indonesian)" },
+    { value: "quran_tr", label: "Quran (Turkish)" },
+    { value: "quran_zh", label: "Quran (Chinese)" }
+];
 
+// Get the dropdown element
+var quranLangDropdown = document.getElementById('quranLangDropdown');
+
+// Populate the dropdown with options from the array
+quranLangOptions.forEach(function(option) {
+    var optionElement = document.createElement('option');
+    optionElement.value = option.value;
+    optionElement.text = option.label;
+    quranLangDropdown.add(optionElement);
+});
+
+// Add event listener to the dropdown
+quranLangDropdown.addEventListener('change', function() {
+    // Get the selected value
+    var selectedValue = quranLangDropdown.options[quranLangDropdown.selectedIndex].value;
+
+    // Display the selected value
+    quranContentEn = loadQuranContent(selectedValue);
+});
 
 
 function populateDropdown(jsonData, dropdownElement) {
@@ -81,10 +115,21 @@ window.onload = function() {
 function loadChapterTranslationJson(chapterId, startVerseIdx, endVerseIdx) {
     chapterId = parseFloat(chapterId)
     // Select the element with id = 1
+    console.log("in func", quranContentEn)
     const chapterContent = quranContentEn.find(item => item.id === chapterId);
     selectedVerses = chapterContent.verses.slice(startVerseIdx, endVerseIdx)
+    const originalVerses = selectedVerses.map((verse) => `${verse.id}. ${verse.text}`);
     const translationVerses = selectedVerses.map((verse) => `${verse.id}. ${verse.translation}`);
-    translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse">${verse}</div>`).join('');
+    // originalVersesContainer.innerHTML = originalVerses.map((verse) => `<div class="verse-original">${verse}</div>`).join('');
+    // translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse-translation">${verse}</div>`).join('');
+    const combinedVerses = [];
+
+    for (let i = 0; i < originalVerses.length; i++) {
+        combinedVerses.push(`<div class="verse-original" style="display:none">${originalVerses[i]}</div>`);
+        combinedVerses.push(`<div class="verse-translation">${translationVerses[i]}</div>`);
+    }
+
+    originalVersesContainer.innerHTML = combinedVerses.join('');
 }
 
 // Function to load and display translation verses from js file
@@ -123,6 +168,17 @@ function clearQuranContentBox() {
 //         loadChapterTranslationJson(quranIndexRevised[currentChapterIndex].id);
 //     }
 // });
+
+
+toggleArabicCheckBox.addEventListener('change', function () {
+    for (var i = 0; i < originalVersesIndividualDivs.length; i++) {
+        if (toggleArabicCheckBox.checked) {
+            originalVersesIndividualDivs[i].style.display = "block";
+        } else {
+            originalVersesIndividualDivs[i].style.display = "none";
+        }
+    }
+});
 
 
 // Event listener for Seerah dropdown change

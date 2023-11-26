@@ -4,7 +4,7 @@ let quranIndex = [
       "rev_order": 1,
       "name": "العلق",
       "transliteration": "Al-'Alaq",
-      "translation": "The Clot",
+      "text": "The Clot",
       "type": "meccan",
       "total_verses": 19,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/96.json"
@@ -14,7 +14,7 @@ let quranIndex = [
       "rev_order": 2,
       "name": "القلم",
       "transliteration": "Al-Qalam",
-      "translation": "The Pen",
+      "text": "The Pen",
       "type": "meccan",
       "total_verses": 52,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/68.json"
@@ -24,7 +24,7 @@ let quranIndex = [
       "rev_order": 3,
       "name": "المزمل",
       "transliteration": "Al-Muzzammil",
-      "translation": "The Enshrouded One",
+      "text": "The Enshrouded One",
       "type": "meccan",
       "total_verses": 20,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/73.json"
@@ -34,7 +34,7 @@ let quranIndex = [
       "rev_order": 4,
       "name": "المدثر",
       "transliteration": "Al-Muddaththir",
-      "translation": "The Cloaked One",
+      "text": "The Cloaked One",
       "type": "meccan",
       "total_verses": 56,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/74.json"
@@ -44,7 +44,7 @@ let quranIndex = [
       "rev_order": 5,
       "name": "الفاتحة",
       "transliteration": "Al-Fatihah",
-      "translation": "The Opener",
+      "text": "The Opener",
       "type": "meccan",
       "total_verses": 7,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/1.json"
@@ -54,7 +54,7 @@ let quranIndex = [
       "rev_order": 6,
       "name": "المسد",
       "transliteration": "Al-Masad",
-      "translation": "The Palm Fiber",
+      "text": "The Palm Fiber",
       "type": "meccan",
       "total_verses": 5,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/111.json"
@@ -64,7 +64,7 @@ let quranIndex = [
       "rev_order": 7,
       "name": "التكوير",
       "transliteration": "At-Takwir",
-      "translation": "The Overthrowing",
+      "text": "The Overthrowing",
       "type": "meccan",
       "total_verses": 29,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/81.json"
@@ -74,7 +74,7 @@ let quranIndex = [
       "rev_order": 8,
       "name": "الأعلى",
       "transliteration": "Al-A'la",
-      "translation": "The Most High",
+      "text": "The Most High",
       "type": "meccan",
       "total_verses": 19,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/87.json"
@@ -84,7 +84,7 @@ let quranIndex = [
       "rev_order": 9,
       "name": "الليل",
       "transliteration": "Al-Layl",
-      "translation": "The Night",
+      "text": "The Night",
       "type": "meccan",
       "total_verses": 21,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/92.json"
@@ -94,7 +94,7 @@ let quranIndex = [
       "rev_order": 10,
       "name": "الفجر",
       "transliteration": "Al-Fajr",
-      "translation": "The Dawn",
+      "text": "The Dawn",
       "type": "meccan",
       "total_verses": 30,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/89.json"
@@ -104,7 +104,7 @@ let quranIndex = [
       "rev_order": 11,
       "name": "الضحى",
       "transliteration": "Ad-Duhaa",
-      "translation": "The Morning Hours",
+      "text": "The Morning Hours",
       "type": "meccan",
       "total_verses": 11,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/93.json"
@@ -114,7 +114,7 @@ let quranIndex = [
       "rev_order": 12,
       "name": "الشرح",
       "transliteration": "Ash-Sharh",
-      "translation": "The Relief",
+      "text": "The Relief",
       "type": "meccan",
       "total_verses": 8,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/94.json"
@@ -124,7 +124,7 @@ let quranIndex = [
       "rev_order": 13,
       "name": "العصر",
       "transliteration": "Al-'Asr",
-      "translation": "The Declining Day",
+      "text": "The Declining Day",
       "type": "meccan",
       "total_verses": 3,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/103.json"
@@ -134,7 +134,7 @@ let quranIndex = [
       "rev_order": 14,
       "name": "العاديات",
       "transliteration": "Al-'Adiyat",
-      "translation": "The Courser",
+      "text": "The Courser",
       "type": "meccan",
       "total_verses": 11,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/100.json"
@@ -144,7 +144,7 @@ let quranIndex = [
       "rev_order": 15,
       "name": "الكوثر",
       "transliteration": "Al-Kawthar",
-      "translation": "The Abundance",
+      "text": "The Abundance",
       "type": "meccan",
       "total_verses": 3,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/108.json"
@@ -154,7 +154,7 @@ let quranIndex = [
       "rev_order": 16,
       "name": "التكاثر",
       "transliteration": "At-Takathur",
-      "translation": "The Rivalry in world increase",
+      "text": "The Rivalry in world increase",
       "type": "meccan",
       "total_verses": 8,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/102.json"
@@ -164,7 +164,7 @@ let quranIndex = [
       "rev_order": 17,
       "name": "الماعون",
       "transliteration": "Al-Ma'un",
-      "translation": "The Small kindnesses",
+      "text": "The Small kindnesses",
       "type": "meccan",
       "total_verses": 7,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/107.json"
@@ -174,7 +174,7 @@ let quranIndex = [
       "rev_order": 18,
       "name": "الكافرون",
       "transliteration": "Al-Kafirun",
-      "translation": "The Disbelievers",
+      "text": "The Disbelievers",
       "type": "meccan",
       "total_verses": 6,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/109.json"
@@ -184,7 +184,7 @@ let quranIndex = [
       "rev_order": 19,
       "name": "الفيل",
       "transliteration": "Al-Fil",
-      "translation": "The Elephant",
+      "text": "The Elephant",
       "type": "meccan",
       "total_verses": 5,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/105.json"
@@ -194,7 +194,7 @@ let quranIndex = [
       "rev_order": 20,
       "name": "الفلق",
       "transliteration": "Al-Falaq",
-      "translation": "The Daybreak",
+      "text": "The Daybreak",
       "type": "meccan",
       "total_verses": 5,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/113.json"
@@ -204,7 +204,7 @@ let quranIndex = [
       "rev_order": 21,
       "name": "الناس",
       "transliteration": "An-Nas",
-      "translation": "Mankind",
+      "text": "Mankind",
       "type": "meccan",
       "total_verses": 6,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/114.json"
@@ -214,7 +214,7 @@ let quranIndex = [
       "rev_order": 22,
       "name": "الإخلاص",
       "transliteration": "Al-Ikhlas",
-      "translation": "The Sincerity",
+      "text": "The Sincerity",
       "type": "meccan",
       "total_verses": 4,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/112.json"
@@ -224,7 +224,7 @@ let quranIndex = [
       "rev_order": 23,
       "name": "النجم",
       "transliteration": "An-Najm",
-      "translation": "The Star",
+      "text": "The Star",
       "type": "meccan",
       "total_verses": 62,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/53.json"
@@ -234,7 +234,7 @@ let quranIndex = [
       "rev_order": 24,
       "name": "عبس",
       "transliteration": "Abasa",
-      "translation": "He Frowned",
+      "text": "He Frowned",
       "type": "meccan",
       "total_verses": 42,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/80.json"
@@ -244,7 +244,7 @@ let quranIndex = [
       "rev_order": 25,
       "name": "القدر",
       "transliteration": "Al-Qadr",
-      "translation": "The Power",
+      "text": "The Power",
       "type": "meccan",
       "total_verses": 5,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/97.json"
@@ -254,7 +254,7 @@ let quranIndex = [
       "rev_order": 26,
       "name": "الشمس",
       "transliteration": "Ash-Shams",
-      "translation": "The Sun",
+      "text": "The Sun",
       "type": "meccan",
       "total_verses": 15,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/91.json"
@@ -264,7 +264,7 @@ let quranIndex = [
       "rev_order": 27,
       "name": "البروج",
       "transliteration": "Al-Buruj",
-      "translation": "The Mansions of the Stars",
+      "text": "The Mansions of the Stars",
       "type": "meccan",
       "total_verses": 22,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/85.json"
@@ -274,7 +274,7 @@ let quranIndex = [
       "rev_order": 28,
       "name": "التين",
       "transliteration": "At-Tin",
-      "translation": "The Fig",
+      "text": "The Fig",
       "type": "meccan",
       "total_verses": 8,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/95.json"
@@ -284,7 +284,7 @@ let quranIndex = [
       "rev_order": 29,
       "name": "قريش",
       "transliteration": "Quraysh",
-      "translation": "Quraysh",
+      "text": "Quraysh",
       "type": "meccan",
       "total_verses": 4,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/106.json"
@@ -294,7 +294,7 @@ let quranIndex = [
       "rev_order": 30,
       "name": "القارعة",
       "transliteration": "Al-Qari'ah",
-      "translation": "The Calamity",
+      "text": "The Calamity",
       "type": "meccan",
       "total_verses": 11,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/101.json"
@@ -304,7 +304,7 @@ let quranIndex = [
       "rev_order": 31,
       "name": "القيامة",
       "transliteration": "Al-Qiyamah",
-      "translation": "The Resurrection",
+      "text": "The Resurrection",
       "type": "meccan",
       "total_verses": 40,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/75.json"
@@ -314,7 +314,7 @@ let quranIndex = [
       "rev_order": 32,
       "name": "الهمزة",
       "transliteration": "Al-Humazah",
-      "translation": "The Traducer",
+      "text": "The Traducer",
       "type": "meccan",
       "total_verses": 9,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/104.json"
@@ -324,7 +324,7 @@ let quranIndex = [
       "rev_order": 33,
       "name": "المرسلات",
       "transliteration": "Al-Mursalat",
-      "translation": "The Emissaries",
+      "text": "The Emissaries",
       "type": "meccan",
       "total_verses": 50,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/77.json"
@@ -334,7 +334,7 @@ let quranIndex = [
       "rev_order": 34,
       "name": "ق",
       "transliteration": "Qaf",
-      "translation": "The Letter \"Qaf\"",
+      "text": "The Letter \"Qaf\"",
       "type": "meccan",
       "total_verses": 45,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/50.json"
@@ -344,7 +344,7 @@ let quranIndex = [
       "rev_order": 35,
       "name": "البلد",
       "transliteration": "Al-Balad",
-      "translation": "The City",
+      "text": "The City",
       "type": "meccan",
       "total_verses": 20,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/90.json"
@@ -354,7 +354,7 @@ let quranIndex = [
       "rev_order": 36,
       "name": "الطارق",
       "transliteration": "At-Tariq",
-      "translation": "The Nightcommer",
+      "text": "The Nightcommer",
       "type": "meccan",
       "total_verses": 17,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/86.json"
@@ -364,7 +364,7 @@ let quranIndex = [
       "rev_order": 37,
       "name": "القمر",
       "transliteration": "Al-Qamar",
-      "translation": "The Moon",
+      "text": "The Moon",
       "type": "meccan",
       "total_verses": 55,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/54.json"
@@ -374,7 +374,7 @@ let quranIndex = [
       "rev_order": 38,
       "name": "ص",
       "transliteration": "Sad",
-      "translation": "The Letter \"Saad\"",
+      "text": "The Letter \"Saad\"",
       "type": "meccan",
       "total_verses": 88,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/38.json"
@@ -384,7 +384,7 @@ let quranIndex = [
       "rev_order": 39,
       "name": "الأعراف",
       "transliteration": "Al-A'raf",
-      "translation": "The Heights",
+      "text": "The Heights",
       "type": "meccan",
       "total_verses": 206,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/7.json"
@@ -394,7 +394,7 @@ let quranIndex = [
       "rev_order": 40,
       "name": "الجن",
       "transliteration": "Al-Jinn",
-      "translation": "The Jinn",
+      "text": "The Jinn",
       "type": "meccan",
       "total_verses": 28,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/72.json"
@@ -404,7 +404,7 @@ let quranIndex = [
       "rev_order": 41,
       "name": "يس",
       "transliteration": "Ya-Sin",
-      "translation": "Ya Sin",
+      "text": "Ya Sin",
       "type": "meccan",
       "total_verses": 83,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/36.json"
@@ -414,7 +414,7 @@ let quranIndex = [
       "rev_order": 42,
       "name": "الفرقان",
       "transliteration": "Al-Furqan",
-      "translation": "The Criterion",
+      "text": "The Criterion",
       "type": "meccan",
       "total_verses": 77,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/25.json"
@@ -424,7 +424,7 @@ let quranIndex = [
       "rev_order": 43,
       "name": "فاطر",
       "transliteration": "Fatir",
-      "translation": "Originator",
+      "text": "Originator",
       "type": "meccan",
       "total_verses": 45,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/35.json"
@@ -434,7 +434,7 @@ let quranIndex = [
       "rev_order": 44,
       "name": "مريم",
       "transliteration": "Maryam",
-      "translation": "Mary",
+      "text": "Mary",
       "type": "meccan",
       "total_verses": 98,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/19.json"
@@ -444,7 +444,7 @@ let quranIndex = [
       "rev_order": 45,
       "name": "طه",
       "transliteration": "Taha",
-      "translation": "Ta-Ha",
+      "text": "Ta-Ha",
       "type": "meccan",
       "total_verses": 135,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/20.json"
@@ -454,7 +454,7 @@ let quranIndex = [
       "rev_order": 46,
       "name": "الواقعة",
       "transliteration": "Al-Waqi'ah",
-      "translation": "The Inevitable",
+      "text": "The Inevitable",
       "type": "meccan",
       "total_verses": 96,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/56.json"
@@ -464,7 +464,7 @@ let quranIndex = [
       "rev_order": 47,
       "name": "الشعراء",
       "transliteration": "Ash-Shu'ara",
-      "translation": "The Poets",
+      "text": "The Poets",
       "type": "meccan",
       "total_verses": 227,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/26.json"
@@ -474,7 +474,7 @@ let quranIndex = [
       "rev_order": 48,
       "name": "النمل",
       "transliteration": "An-Naml",
-      "translation": "The Ant",
+      "text": "The Ant",
       "type": "meccan",
       "total_verses": 93,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/27.json"
@@ -484,7 +484,7 @@ let quranIndex = [
       "rev_order": 49,
       "name": "القصص",
       "transliteration": "Al-Qasas",
-      "translation": "The Stories",
+      "text": "The Stories",
       "type": "meccan",
       "total_verses": 88,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/28.json"
@@ -494,7 +494,7 @@ let quranIndex = [
       "rev_order": 50,
       "name": "الإسراء",
       "transliteration": "Al-Isra",
-      "translation": "The Night Journey",
+      "text": "The Night Journey",
       "type": "meccan",
       "total_verses": 111,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/17.json"
@@ -504,7 +504,7 @@ let quranIndex = [
       "rev_order": 51,
       "name": "يونس",
       "transliteration": "Yunus",
-      "translation": "Jonah",
+      "text": "Jonah",
       "type": "meccan",
       "total_verses": 109,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/10.json"
@@ -514,7 +514,7 @@ let quranIndex = [
       "rev_order": 52,
       "name": "هود",
       "transliteration": "Hud",
-      "translation": "Hud",
+      "text": "Hud",
       "type": "meccan",
       "total_verses": 123,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/11.json"
@@ -524,7 +524,7 @@ let quranIndex = [
       "rev_order": 53,
       "name": "يوسف",
       "transliteration": "Yusuf",
-      "translation": "Joseph",
+      "text": "Joseph",
       "type": "meccan",
       "total_verses": 111,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/12.json"
@@ -534,7 +534,7 @@ let quranIndex = [
       "rev_order": 54,
       "name": "الحجر",
       "transliteration": "Al-Hijr",
-      "translation": "The Rocky Tract",
+      "text": "The Rocky Tract",
       "type": "meccan",
       "total_verses": 99,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/15.json"
@@ -544,7 +544,7 @@ let quranIndex = [
       "rev_order": 55,
       "name": "الأنعام",
       "transliteration": "Al-An'am",
-      "translation": "The Cattle",
+      "text": "The Cattle",
       "type": "meccan",
       "total_verses": 165,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/6.json"
@@ -554,7 +554,7 @@ let quranIndex = [
       "rev_order": 56,
       "name": "الصافات",
       "transliteration": "As-Saffat",
-      "translation": "Those who set the Ranks",
+      "text": "Those who set the Ranks",
       "type": "meccan",
       "total_verses": 182,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/37.json"
@@ -564,7 +564,7 @@ let quranIndex = [
       "rev_order": 57,
       "name": "لقمان",
       "transliteration": "Luqman",
-      "translation": "Luqman",
+      "text": "Luqman",
       "type": "meccan",
       "total_verses": 34,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/31.json"
@@ -574,7 +574,7 @@ let quranIndex = [
       "rev_order": 58,
       "name": "سبإ",
       "transliteration": "Saba",
-      "translation": "Sheba",
+      "text": "Sheba",
       "type": "meccan",
       "total_verses": 54,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/34.json"
@@ -584,7 +584,7 @@ let quranIndex = [
       "rev_order": 59,
       "name": "الزمر",
       "transliteration": "Az-Zumar",
-      "translation": "The Troops",
+      "text": "The Troops",
       "type": "meccan",
       "total_verses": 75,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/39.json"
@@ -594,7 +594,7 @@ let quranIndex = [
       "rev_order": 60,
       "name": "غافر",
       "transliteration": "Ghafir",
-      "translation": "The Forgiver",
+      "text": "The Forgiver",
       "type": "meccan",
       "total_verses": 85,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/40.json"
@@ -604,7 +604,7 @@ let quranIndex = [
       "rev_order": 61,
       "name": "فصلت",
       "transliteration": "Fussilat",
-      "translation": "Explained in Detail",
+      "text": "Explained in Detail",
       "type": "meccan",
       "total_verses": 54,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/41.json"
@@ -614,7 +614,7 @@ let quranIndex = [
       "rev_order": 62,
       "name": "الشورى",
       "transliteration": "Ash-Shuraa",
-      "translation": "The Consultation",
+      "text": "The Consultation",
       "type": "meccan",
       "total_verses": 53,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/42.json"
@@ -624,7 +624,7 @@ let quranIndex = [
       "rev_order": 63,
       "name": "الزخرف",
       "transliteration": "Az-Zukhruf",
-      "translation": "The Ornaments of Gold",
+      "text": "The Ornaments of Gold",
       "type": "meccan",
       "total_verses": 89,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/43.json"
@@ -634,7 +634,7 @@ let quranIndex = [
       "rev_order": 64,
       "name": "الدخان",
       "transliteration": "Ad-Dukhan",
-      "translation": "The Smoke",
+      "text": "The Smoke",
       "type": "meccan",
       "total_verses": 59,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/44.json"
@@ -644,7 +644,7 @@ let quranIndex = [
       "rev_order": 65,
       "name": "الجاثية",
       "transliteration": "Al-Jathiyah",
-      "translation": "The Crouching",
+      "text": "The Crouching",
       "type": "meccan",
       "total_verses": 37,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/45.json"
@@ -654,7 +654,7 @@ let quranIndex = [
       "rev_order": 66,
       "name": "الأحقاف",
       "transliteration": "Al-Ahqaf",
-      "translation": "The Wind-Curved Sandhills",
+      "text": "The Wind-Curved Sandhills",
       "type": "meccan",
       "total_verses": 35,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/46.json"
@@ -664,7 +664,7 @@ let quranIndex = [
       "rev_order": 67,
       "name": "الذاريات",
       "transliteration": "Adh-Dhariyat",
-      "translation": "The Winnowing Winds",
+      "text": "The Winnowing Winds",
       "type": "meccan",
       "total_verses": 60,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/51.json"
@@ -674,7 +674,7 @@ let quranIndex = [
       "rev_order": 68,
       "name": "الغاشية",
       "transliteration": "Al-Ghashiyah",
-      "translation": "The Overwhelming",
+      "text": "The Overwhelming",
       "type": "meccan",
       "total_verses": 26,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/88.json"
@@ -684,7 +684,7 @@ let quranIndex = [
       "rev_order": 69,
       "name": "الكهف",
       "transliteration": "Al-Kahf",
-      "translation": "The Cave",
+      "text": "The Cave",
       "type": "meccan",
       "total_verses": 110,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/18.json"
@@ -694,7 +694,7 @@ let quranIndex = [
       "rev_order": 70,
       "name": "النحل",
       "transliteration": "An-Nahl",
-      "translation": "The Bee",
+      "text": "The Bee",
       "type": "meccan",
       "total_verses": 128,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/16.json"
@@ -704,7 +704,7 @@ let quranIndex = [
       "rev_order": 71,
       "name": "نوح",
       "transliteration": "Nuh",
-      "translation": "Noah",
+      "text": "Noah",
       "type": "meccan",
       "total_verses": 28,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/71.json"
@@ -714,7 +714,7 @@ let quranIndex = [
       "rev_order": 72,
       "name": "ابراهيم",
       "transliteration": "Ibrahim",
-      "translation": "Abraham",
+      "text": "Abraham",
       "type": "meccan",
       "total_verses": 52,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/14.json"
@@ -724,7 +724,7 @@ let quranIndex = [
       "rev_order": 73,
       "name": "الأنبياء",
       "transliteration": "Al-Anbya",
-      "translation": "The Prophets",
+      "text": "The Prophets",
       "type": "meccan",
       "total_verses": 112,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/21.json"
@@ -734,7 +734,7 @@ let quranIndex = [
       "rev_order": 74,
       "name": "المؤمنون",
       "transliteration": "Al-Mu'minun",
-      "translation": "The Believers",
+      "text": "The Believers",
       "type": "meccan",
       "total_verses": 118,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/23.json"
@@ -744,7 +744,7 @@ let quranIndex = [
       "rev_order": 75,
       "name": "السجدة",
       "transliteration": "As-Sajdah",
-      "translation": "The Prostration",
+      "text": "The Prostration",
       "type": "meccan",
       "total_verses": 30,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/32.json"
@@ -754,7 +754,7 @@ let quranIndex = [
       "rev_order": 76,
       "name": "الطور",
       "transliteration": "At-Tur",
-      "translation": "The Mount",
+      "text": "The Mount",
       "type": "meccan",
       "total_verses": 49,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/52.json"
@@ -764,7 +764,7 @@ let quranIndex = [
       "rev_order": 77,
       "name": "الملك",
       "transliteration": "Al-Mulk",
-      "translation": "The Sovereignty",
+      "text": "The Sovereignty",
       "type": "meccan",
       "total_verses": 30,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/67.json"
@@ -774,7 +774,7 @@ let quranIndex = [
       "rev_order": 78,
       "name": "الحاقة",
       "transliteration": "Al-Haqqah",
-      "translation": "The Reality",
+      "text": "The Reality",
       "type": "meccan",
       "total_verses": 52,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/69.json"
@@ -784,7 +784,7 @@ let quranIndex = [
       "rev_order": 79,
       "name": "المعارج",
       "transliteration": "Al-Ma'arij",
-      "translation": "The Ascending Stairways",
+      "text": "The Ascending Stairways",
       "type": "meccan",
       "total_verses": 44,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/70.json"
@@ -794,7 +794,7 @@ let quranIndex = [
       "rev_order": 80,
       "name": "النبإ",
       "transliteration": "An-Naba",
-      "translation": "The Tidings",
+      "text": "The Tidings",
       "type": "meccan",
       "total_verses": 40,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/78.json"
@@ -804,7 +804,7 @@ let quranIndex = [
       "rev_order": 81,
       "name": "النازعات",
       "transliteration": "An-Nazi'at",
-      "translation": "Those who drag forth",
+      "text": "Those who drag forth",
       "type": "meccan",
       "total_verses": 46,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/79.json"
@@ -814,7 +814,7 @@ let quranIndex = [
       "rev_order": 82,
       "name": "الإنفطار",
       "transliteration": "Al-Infitar",
-      "translation": "The Cleaving",
+      "text": "The Cleaving",
       "type": "meccan",
       "total_verses": 19,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/82.json"
@@ -824,7 +824,7 @@ let quranIndex = [
       "rev_order": 83,
       "name": "الإنشقاق",
       "transliteration": "Al-Inshiqaq",
-      "translation": "The Sundering",
+      "text": "The Sundering",
       "type": "meccan",
       "total_verses": 25,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/84.json"
@@ -834,7 +834,7 @@ let quranIndex = [
       "rev_order": 84,
       "name": "الروم",
       "transliteration": "Ar-Rum",
-      "translation": "The Romans",
+      "text": "The Romans",
       "type": "meccan",
       "total_verses": 60,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/30.json"
@@ -844,7 +844,7 @@ let quranIndex = [
       "rev_order": 85,
       "name": "العنكبوت",
       "transliteration": "Al-'Ankabut",
-      "translation": "The Spider",
+      "text": "The Spider",
       "type": "meccan",
       "total_verses": 69,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/29.json"
@@ -854,7 +854,7 @@ let quranIndex = [
       "rev_order": 86,
       "name": "المطففين",
       "transliteration": "Al-Mutaffifin",
-      "translation": "The Defrauding",
+      "text": "The Defrauding",
       "type": "meccan",
       "total_verses": 36,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/83.json"
@@ -864,7 +864,7 @@ let quranIndex = [
       "rev_order": 87,
       "name": "البقرة",
       "transliteration": "Al-Baqarah",
-      "translation": "The Cow",
+      "text": "The Cow",
       "type": "medinan",
       "total_verses": 286,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/2.json"
@@ -874,7 +874,7 @@ let quranIndex = [
       "rev_order": 88,
       "name": "الأنفال",
       "transliteration": "Al-Anfal",
-      "translation": "The Spoils of War",
+      "text": "The Spoils of War",
       "type": "medinan",
       "total_verses": 75,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/8.json"
@@ -884,7 +884,7 @@ let quranIndex = [
       "rev_order": 89,
       "name": "آل عمران",
       "transliteration": "Ali 'Imran",
-      "translation": "Family of Imran",
+      "text": "Family of Imran",
       "type": "medinan",
       "total_verses": 200,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/3.json"
@@ -894,7 +894,7 @@ let quranIndex = [
       "rev_order": 90,
       "name": "الأحزاب",
       "transliteration": "Al-Ahzab",
-      "translation": "The Combined Forces",
+      "text": "The Combined Forces",
       "type": "medinan",
       "total_verses": 73,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/33.json"
@@ -904,7 +904,7 @@ let quranIndex = [
       "rev_order": 91,
       "name": "الممتحنة",
       "transliteration": "Al-Mumtahanah",
-      "translation": "She that is to be examined",
+      "text": "She that is to be examined",
       "type": "medinan",
       "total_verses": 13,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/60.json"
@@ -914,7 +914,7 @@ let quranIndex = [
       "rev_order": 92,
       "name": "النساء",
       "transliteration": "An-Nisa",
-      "translation": "The Women",
+      "text": "The Women",
       "type": "medinan",
       "total_verses": 176,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/4.json"
@@ -924,7 +924,7 @@ let quranIndex = [
       "rev_order": 93,
       "name": "الزلزلة",
       "transliteration": "Az-Zalzalah",
-      "translation": "The Earthquake",
+      "text": "The Earthquake",
       "type": "medinan",
       "total_verses": 8,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/99.json"
@@ -934,7 +934,7 @@ let quranIndex = [
       "rev_order": 94,
       "name": "الحديد",
       "transliteration": "Al-Hadid",
-      "translation": "The Iron",
+      "text": "The Iron",
       "type": "medinan",
       "total_verses": 29,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/57.json"
@@ -944,7 +944,7 @@ let quranIndex = [
       "rev_order": 95,
       "name": "محمد",
       "transliteration": "Muhammad",
-      "translation": "Muhammad",
+      "text": "Muhammad",
       "type": "medinan",
       "total_verses": 38,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/47.json"
@@ -954,7 +954,7 @@ let quranIndex = [
       "rev_order": 96,
       "name": "الرعد",
       "transliteration": "Ar-Ra'd",
-      "translation": "The Thunder",
+      "text": "The Thunder",
       "type": "medinan",
       "total_verses": 43,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/13.json"
@@ -964,7 +964,7 @@ let quranIndex = [
       "rev_order": 97,
       "name": "الرحمن",
       "transliteration": "Ar-Rahman",
-      "translation": "The Beneficent",
+      "text": "The Beneficent",
       "type": "medinan",
       "total_verses": 78,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/55.json"
@@ -974,7 +974,7 @@ let quranIndex = [
       "rev_order": 98,
       "name": "الانسان",
       "transliteration": "Al-Insan",
-      "translation": "The Man",
+      "text": "The Man",
       "type": "medinan",
       "total_verses": 31,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/76.json"
@@ -984,7 +984,7 @@ let quranIndex = [
       "rev_order": 99,
       "name": "الطلاق",
       "transliteration": "At-Talaq",
-      "translation": "The Divorce",
+      "text": "The Divorce",
       "type": "medinan",
       "total_verses": 12,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/65.json"
@@ -994,7 +994,7 @@ let quranIndex = [
       "rev_order": 100,
       "name": "البينة",
       "transliteration": "Al-Bayyinah",
-      "translation": "The Clear Proof",
+      "text": "The Clear Proof",
       "type": "medinan",
       "total_verses": 8,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/98.json"
@@ -1004,7 +1004,7 @@ let quranIndex = [
       "rev_order": 101,
       "name": "الحشر",
       "transliteration": "Al-Hashr",
-      "translation": "The Exile",
+      "text": "The Exile",
       "type": "medinan",
       "total_verses": 24,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/59.json"
@@ -1014,7 +1014,7 @@ let quranIndex = [
       "rev_order": 102,
       "name": "النور",
       "transliteration": "An-Nur",
-      "translation": "The Light",
+      "text": "The Light",
       "type": "medinan",
       "total_verses": 64,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/24.json"
@@ -1024,7 +1024,7 @@ let quranIndex = [
       "rev_order": 103,
       "name": "الحج",
       "transliteration": "Al-Hajj",
-      "translation": "The Pilgrimage",
+      "text": "The Pilgrimage",
       "type": "medinan",
       "total_verses": 78,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/22.json"
@@ -1034,7 +1034,7 @@ let quranIndex = [
       "rev_order": 104,
       "name": "المنافقون",
       "transliteration": "Al-Munafiqun",
-      "translation": "The Hypocrites",
+      "text": "The Hypocrites",
       "type": "medinan",
       "total_verses": 11,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/63.json"
@@ -1044,7 +1044,7 @@ let quranIndex = [
       "rev_order": 105,
       "name": "المجادلة",
       "transliteration": "Al-Mujadila",
-      "translation": "The Pleading Woman",
+      "text": "The Pleading Woman",
       "type": "medinan",
       "total_verses": 22,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/58.json"
@@ -1054,7 +1054,7 @@ let quranIndex = [
       "rev_order": 106,
       "name": "الحجرات",
       "transliteration": "Al-Hujurat",
-      "translation": "The Rooms",
+      "text": "The Rooms",
       "type": "medinan",
       "total_verses": 18,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/49.json"
@@ -1064,7 +1064,7 @@ let quranIndex = [
       "rev_order": 107,
       "name": "التحريم",
       "transliteration": "At-Tahrim",
-      "translation": "The Prohibition",
+      "text": "The Prohibition",
       "type": "medinan",
       "total_verses": 12,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/66.json"
@@ -1074,7 +1074,7 @@ let quranIndex = [
       "rev_order": 108,
       "name": "التغابن",
       "transliteration": "At-Taghabun",
-      "translation": "The Mutual Disillusion",
+      "text": "The Mutual Disillusion",
       "type": "medinan",
       "total_verses": 18,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/64.json"
@@ -1084,7 +1084,7 @@ let quranIndex = [
       "rev_order": 109,
       "name": "الصف",
       "transliteration": "As-Saf",
-      "translation": "The Ranks",
+      "text": "The Ranks",
       "type": "medinan",
       "total_verses": 14,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/61.json"
@@ -1094,7 +1094,7 @@ let quranIndex = [
       "rev_order": 110,
       "name": "الجمعة",
       "transliteration": "Al-Jumu'ah",
-      "translation": "The Congregation, Friday",
+      "text": "The Congregation, Friday",
       "type": "medinan",
       "total_verses": 11,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/62.json"
@@ -1104,7 +1104,7 @@ let quranIndex = [
       "rev_order": 111,
       "name": "الفتح",
       "transliteration": "Al-Fath",
-      "translation": "The Victory",
+      "text": "The Victory",
       "type": "medinan",
       "total_verses": 29,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/48.json"
@@ -1114,7 +1114,7 @@ let quranIndex = [
       "rev_order": 112,
       "name": "المائدة",
       "transliteration": "Al-Ma'idah",
-      "translation": "The Table Spread",
+      "text": "The Table Spread",
       "type": "medinan",
       "total_verses": 120,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/5.json"
@@ -1124,7 +1124,7 @@ let quranIndex = [
       "rev_order": 113,
       "name": "التوبة",
       "transliteration": "At-Tawbah",
-      "translation": "The Repentance",
+      "text": "The Repentance",
       "type": "medinan",
       "total_verses": 129,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/9.json"
@@ -1134,7 +1134,7 @@ let quranIndex = [
       "rev_order": 114,
       "name": "النصر",
       "transliteration": "An-Nasr",
-      "translation": "The Divine Support",
+      "text": "The Divine Support",
       "type": "medinan",
       "total_verses": 3,
       "link": "https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/110.json"
