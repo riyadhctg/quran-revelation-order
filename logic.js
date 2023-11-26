@@ -55,7 +55,6 @@ let quranContentEn = loadQuranContent("quran_en");
 var quranLangOptions = [
     { value: "quran_es", label: "Quran (Spanish)" },
     { value: "quran_ru", label: "Quran (Russian)" },
-    { value: "quran_transliteration", label: "Quran (Transliteration)" },
     { value: "quran_bn", label: "Quran (Bengali)" },
     { value: "quran_fr", label: "Quran (French)" },
     { value: "quran_sv", label: "Quran (Swedish)" },
@@ -118,14 +117,14 @@ function loadChapterTranslationJson(chapterId, startVerseIdx, endVerseIdx) {
     console.log("in func", quranContentEn)
     const chapterContent = quranContentEn.find(item => item.id === chapterId);
     selectedVerses = chapterContent.verses.slice(startVerseIdx, endVerseIdx)
-    const originalVerses = selectedVerses.map((verse) => `${verse.id}. ${verse.text}`);
+    const originalVerses = selectedVerses.map((verse) => `${verse.text}`);
     const translationVerses = selectedVerses.map((verse) => `${verse.id}. ${verse.translation}`);
     // originalVersesContainer.innerHTML = originalVerses.map((verse) => `<div class="verse-original">${verse}</div>`).join('');
     // translationContainer.innerHTML = translationVerses.map((verse) => `<div class="verse-translation">${verse}</div>`).join('');
     const combinedVerses = [];
 
     for (let i = 0; i < originalVerses.length; i++) {
-        combinedVerses.push(`<div class="verse-original" style="display:none">${originalVerses[i]}</div>`);
+        combinedVerses.push(`<div class="verse-original" style="display:${getArabicVisibility()}">${originalVerses[i]}</div>`);
         combinedVerses.push(`<div class="verse-translation">${translationVerses[i]}</div>`);
     }
 
@@ -170,13 +169,18 @@ function clearQuranContentBox() {
 // });
 
 
+function getArabicVisibility() {
+    if (toggleArabicCheckBox.checked) {
+        return "block";
+    } else {
+        return "none";
+    }
+}
+
+
 toggleArabicCheckBox.addEventListener('change', function () {
     for (var i = 0; i < originalVersesIndividualDivs.length; i++) {
-        if (toggleArabicCheckBox.checked) {
-            originalVersesIndividualDivs[i].style.display = "block";
-        } else {
-            originalVersesIndividualDivs[i].style.display = "none";
-        }
+        originalVersesIndividualDivs[i].style.display = getArabicVisibility();
     }
 });
 

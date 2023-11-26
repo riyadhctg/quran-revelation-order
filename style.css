@@ -96,6 +96,47 @@ header {
     font-size: 1.3rem
 }
 
+#quranLangDropdown {
+    --primary: #007bff;
+    --gray: #6c757d;
+    --dark: #343a40;
+  
+    box-sizing: border-box;
+    margin: 0;
+    font-family: inherit;
+    overflow: visible;
+    text-transform: none;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: var(--gray); /* Use the primary color or your custom color */
+    border-color: var(--gray); /* Use the primary color or your custom color */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    -webkit-appearance: none; /* Remove default styles on WebKit browsers */
+    appearance: none; /* Remove default styles on modern browsers */
+    cursor: pointer;
+  }
+  
+  #quranLangDropdown:hover {
+    background-color: var(--dark); /* Use a darker shade on hover if desired */
+    border-color: var(--dark); /* Use a darker shade on hover if desired */
+  }
+  
+  #quranLangDropdown:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a subtle focus effect */
+  }
+  
+
 
 @media (max-width: 576px) {
     .btn-group {
