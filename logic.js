@@ -53,13 +53,13 @@ let quranContentEn = loadQuranContent("quran_en");
 
 // Array of JSON file options with labels
 var quranLangOptions = [
+    { value: "quran_en", label: "Quran (English)" },
     { value: "quran_es", label: "Quran (Spanish)" },
     { value: "quran_ru", label: "Quran (Russian)" },
     { value: "quran_bn", label: "Quran (Bengali)" },
     { value: "quran_fr", label: "Quran (French)" },
     { value: "quran_sv", label: "Quran (Swedish)" },
     { value: "quran_ur", label: "Quran (Urdu)" },
-    { value: "quran_en", label: "Quran (English)" },
     { value: "quran_id", label: "Quran (Indonesian)" },
     { value: "quran_tr", label: "Quran (Turkish)" },
     { value: "quran_zh", label: "Quran (Chinese)" }

@@ -136,6 +136,17 @@ header {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a subtle focus effect */
   }
   
+/* Custom CSS to make the checkbox more prominent */
+#toggleArabicCheckBox {
+    transform: scale(1.5); /* Adjust the scale factor as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* Optional: Adjust the label style for better alignment */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
 
 
 @media (max-width: 576px) {
